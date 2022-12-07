@@ -123,6 +123,9 @@ function DegerledirmeEkle(gelenDizi, gelenIsim, gelenPuan, gelenGeribildirim){
 */
 
 
+
+
+
 function AnahtardanDegerlendirmeAl(gelenDizi, gelenKey) {
 	return `${gelenDizi[gelenKey].isim} isimli kişi ${gelenDizi[gelenKey].puan} puan verdi ve şunları yazdı: ${gelenDizi[gelenKey].geribildirim}`;
 
@@ -166,7 +169,7 @@ function SonDegerlendirmeyiAl(gelenDizi) {
 */
 
 function PuanaGoreDegerlendirmeAl(gelenDizi, gelenPuan) {
-    return gelenDizi.filter(array=> array.puan>=gelenPuan);
+    return gelenDizi.filter(array=> Math.floor(array.puan)===gelenPuan);
 }
 console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler, 3) );
 
